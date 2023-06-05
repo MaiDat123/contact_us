@@ -13,24 +13,33 @@
         emailjs.init("ouI4AWl5BOxEByBBR");
         })();
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/khungbao.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/formlogin.css">
+    <link rel="stylesheet" href="./css/search.css">
     <title>Nop form</title>
     <style>
         .form_container
         {
             max-width: 1170px;
-            margin: 0 auto;
+            margin: 10px auto;
             border-radius: 5px;
             display: flex;
             justify-content: center;
-            border: 1px solid;
+            background-color:azure;
         }
         .form_contact
         {
             position: relative;
-            border: 1px solid;
             margin-left: 20px;
             width: 400px;
             height: 370px;
+            border-radius: 5px;
+            background-color:azure;
         }
         #fullname
         {
@@ -52,31 +61,301 @@
             margin: 6px;
             border-radius: 5px;
         }
-        button
+        #send
         {
             padding: 5px;
             position: absolute;
             bottom: 0;
             right: 0;
+            background-color: #ffff;
             border-radius: 5px;
+            border: 1px solid;
         }
-        .reset
+        #reset
         {
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            background-color: #ffff;
+            border-radius: 5px;
+            border: 1px solid;
             right: 60px;
+            
         }
     </style>
 </head>
 <body>
-    <div class="form_container">
-        <form class="form_contact">
-            <h1>Liên Hệ Với Chúng Tôi</h1>
-            <label for=""></label>
-            <input type="text" name="" id="fullname" placeholder="HỌ VÀ TÊN" required> <br>
-            <input type="email" id="email_id" placeholder="ĐỊA CHỈ EMAIL" required> <br>
-            <textarea name="" id="message" cols="30" rows="10" placeholder="LỜI NHẮN " required></textarea> <br>
-            <button class="reset" type="reset">clear</button> <button class="send" onclick="SendMail()">Send</button>
+    <div class="header">
+        <a href="index.html"><img src="img/logo/logo.svg" alt="LOGO"></a>
+        <div class="header_menu">
+            <ul class="header_menu-left">
+                <li><a href="#">Nhà đất bán</a></li>
+                <li><a href="#">Nhà đất cho thuê</a></li>
+                <li><a href="#">Dự án</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Wiki BĐS</a></li>
+            </ul>
+            <ul class="header_menu-right">
+                <li><a class="header_menu-right header_menu-btn" href="#">Đăng nhập</a></li>
+                <li><a class="header_menu-right header_menu-btn" href="#">Đăng ký</a></li>
+                <li><a class="header_menu-right header_menu-btn btn" href="#">Đăng tin</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_nav">
+        <div class="textbox">
+            <input type="text" class="textbox_input">
+            <label for="" class="textbox_label">Dự án của bạn</label>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <form action="" method="post">
+            <div class="header_submenu">
+                <label for="">Loại nhà đất</label>
+                <ul class="submenu">
+                    <li><label for="">Tất cả nhà đất</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Căn hộ chung cư</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Các loại nhà bán</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Các loại đất bán</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Trang trại, khu nghỉ dưỡng</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Kho, nhà xưởng</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Bất động sản khác</label><input type="checkbox" name="" id=""></li>
+                </ul>
+            </div>
+            <div class="header_submenu">
+                <label for="">Khu vực & Dự án</label>
+                <ul class="submenu">
+                    <li><label for="">Tất cả nhà đất</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Căn hộ chung cư</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Các loại nhà đất</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Các loại đất bán</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Trang trại, khu nghỉ dưỡng</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Kho, nhà xưởng</label><input type="checkbox" name="" id=""></li>
+                    <li><label for="">Bất động sản khác</label><input type="checkbox" name="" id=""></li>
+                </ul>
+            </div>
+            <div class="header_submenu">
+                <label for="">Mức giá</label>
+                <ul class="submenu">
+                    <li><a href="#">Tất cả mức giá</a></li>
+                    <li><a href="#">Dưới 500 triệu</a></li>
+                    <li><a href="#">500 - 800 triệu</a></li>
+                    <li><a href="#">800 triệu - 1 tỷ</a></li>
+                    <li><a href="#">1 - 2 tỷ</a></li>
+                    <li><a href="#">2 - 3 tỷ</a></li>
+                    <li><a href="#">3 - 5 tỷ</a></li>
+                    <li><a href="#">5 - 7 tỷ</a></li>
+                </ul>
+            </div>
+            <div class="header_submenu">
+                <label for="">Diện tích</label>
+                <ul class="submenu">
+                    <li><a href="#">Tất cả diện tích</a></li>
+                    <li><a href="#">Dưới 30 m<sup>2</sup></a></li>
+                    <li><a href="#">30 - 50 m<sup>2</sup></a></li>
+                    <li><a href="#">50 - 80 m<sup>2</sup></a></li>
+                    <li><a href="#">80 - 100 m<sup>2</sup></a></li>
+                    <li><a href="#">100 - 150 m<sup>2</sup></a></li>
+                    <li><a href="#">150 - 200 m<sup>2</sup></a></li>
+                    <li><a href="#">200 - 250 m<sup>2</sup></a></li>
+                </ul>
+            </div>
+            <button class="nav_btn" type="reset"><i class="fa-solid fa-arrows-rotate"></i>Đặt lại</button>
         </form>
     </div>
     
+    <div class="form_container">
+        <div class="form_contact">
+            <h1>Liên Hệ Với Chúng Tôi</h1>
+            <input type="text" name="" id="fullname" placeholder="HỌ VÀ TÊN" required> <br>
+            <input type="email" id="email_id" placeholder="ĐỊA CHỈ EMAIL" required> <br>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="LỜI NHẮN " required></textarea> <br>
+            <button id="reset" type="reset">clear</button> <button id="send" onclick="SendMail()">Send</button>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <div class="footer_logo">
+                    <img src="img/logo/logo_gray-5.svg" alt="">
+                </div>
+                <ul class="col_menu">
+                    <li>
+                        <h5>CÔNG TY CỔ PHẦN PROPERTYGURU VIỆT NAM</h5>
+                    </li>
+                    <li><i class="fa-solid fa-location-dot"></i>
+                        <h5>Tầng 31, Keangnam Hanoi Landmark, Phạm Hùng, Nam Từ Liêm, Hà Nội</h5>
+                    </li>
+                    <li><i class="fa-solid fa-phone-volume"></i>
+                        <h5>(024) 3562 5939 - (024) 3562 5940</h5>
+                    </li>
+                    <li>
+                        <img class="logo" src="img/logo/google_play.png" alt=""> <img class="logo"
+                            src="img/logo/app_store.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="col col_1">
+                <div class="footer_detail">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div>Hotline</div>
+                    <div>1900 1881</div>
+                </div>
+                <ul class="footer_detail-menu">
+                    <li><a href="#">HƯỚNG DẪN</a></li>
+                    <li><a href="#">Báo giá & hỗ trợ</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col col_2">
+                <div class="footer_detail">
+                    <i class="fa-solid fa-user"></i>
+                    <div>Hỗ trợ khách hàng</div>
+                    <div><a href="https://trogiup.batdongsan.com.vn/">trogiup.batdongsan.com.vn</a></div>
+                </div>
+                <ul class="footer_detail-menu">
+                    <li><a href="#">QUY ĐỊNH</a></li>
+                    <li><a href="#">Quy định đăng tin</a></li>
+                    <li><a href="#">Điều khoản thỏa thuận</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Giải quyết khiếu nại</a></li>
+                    <li><a href="#">Góp ý báo lỗi</a></li>
+                </ul>
+            </div>
+            <div class="col col_3">
+                <div class="footer_detail">
+                    <i class="fa-solid fa-headphones"></i>
+                    <div>Chăm sóc khách hàng</div>
+                    <div>
+                        <a href="https://trogiup.batdongsan.com.vn/" target="_blank">hotro@batdongsan.com.vn</a>
+                    </div>
+                </div>
+                <ul class="footer_detail-menu">
+                    <li>
+                        <label for="">ĐĂNG KÝ NHẮN TIN</label>
+                        <div class="sign">
+                            <input class="sign_input" type="text" name="" id="" placeholder="Nhập email của bạn">
+                            <button title="Đăng ký" type="submit" class="sign_input-btn"><i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+
+                    </li>
+                    <li>
+                        <label for="" style="font-weight: bold;color: #696969;">QUỐC GIA & NGÔN NGỮ</label>
+                        <br>
+                        <div class="country_menu">
+                            <ul>
+                                <li>Viet Nam</li>
+                                <li>Singapore</li>
+                                <li>Malaysia</li>
+                                <li>Thailand</li>
+                                <li>Indonesia</li>
+                                <li>Australia</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <h5 style="margin-left: 20px;"> Xem chi nhánh của Batdongsan.com.vn</h5>
+        <div class="info_position">
+
+            <div class="info_col_1">
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+            </div>
+            <div class="info_col_2">
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+            </div>
+            <div class="info_col_3">
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+                <div class="info">
+                    <label for="">Chi nhánh TP. Hồ Chí Minh</label>
+                    <p>Tầng 3, Tháp B tòa nhà Viettel Complex, 285 Cách Mạng Tháng Tám, Phường 12, Quận 10, TP. Hồ Chí
+                        Minh
+                        <br>Điện thoại: 0904 893 279 - 0904 946 163
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h5 style="margin-left: 20px;">Copyright &#64; 2007 - 2023 Batdongsan.com.vn</h5>
+        <div class="final_info">
+            <div>
+                <ul class="menu_footer final_info_1">
+                    <li>Giấy ĐKKD số 0104630479 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 02/06/2010</li>
+                    <li>Giấy phép ICP số 2399/GP-STTTT do Sở TTTT Hà Nội cấp ngày 4/9/2014</li>
+                    <li>Giấy phép GH ICP số 3832/GP-TTĐT do Sở TTTT Hà Nội cấp ngày 8/8/2019</li>
+                    <li>Giấy phép SĐ, BS GP ICP số 3833/GP-TTĐT do Sở TTTT Hà Nội cấp ngày 8/8/2019</li>
+                    <li>Giấy xác nhận số 1728/GXN-TTĐT do Sở TTTT Hà Nội cấp ngày 23/6/2020</li>
+                    <li>Giấy phép GH ICP số 2886/GP-TTĐT do Sở TTTT Hà Nội cấp ngày 09/08/2021</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="menu_footer final_info_2">
+                    <li>Chịu trách nhiệm nội dung GP ICP: Bà Đặng Thị Hường</li>
+                    <li>Chịu trách nhiệm sàn GDTMĐT: Ông Nguyễn Đức Thắng</li>
+                    <li>Quy chế, quy định giao dịch có hiệu lực từ 27/02/2023</li>
+                    <li>Ghi rõ nguồn "Batdongsan.com.vn" khi phát hành lại <br> thông tin từ website này.</li>
+                </ul>
+            </div>
+            <div class="menu_footer final_info_3">
+                <img src="img/logo/da-dang-ki-bct.svg" alt="LOGO">
+            </div>
+            <div class="menu_footer final_info_4">
+                <a href="#"><i class="fa-brands fa-square-facebook"> </i></a>
+                <a href="#"><i class="fa-brands fa-youtube"> </i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"> </i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
