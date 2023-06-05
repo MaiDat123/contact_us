@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("ouI4AWl5BOxEByBBR");
+        })();
+    </script>
+    <title>Nop form</title>
+    <style>
+        .form_container
+        {
+            max-width: 1170px;
+            margin: 0 auto;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid;
+        }
+        .form_contact
+        {
+            position: relative;
+            border: 1px solid;
+            margin-left: 20px;
+            width: 400px;
+            height: 370px;
+        }
+        #fullname
+        {
+            width: 235px;
+            padding: 5px;
+            margin: 6px;
+            border-radius: 5px;
+        }
+        #email_id
+        {
+            width: 235px;
+            padding: 5px;
+            margin: 6px;
+            border-radius: 5px;
+        }
+        #message
+        {
+            padding: 5px;
+            margin: 6px;
+            border-radius: 5px;
+        }
+        button
+        {
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 5px;
+        }
+        .reset
+        {
+            right: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form_container">
+        <form class="form_contact">
+            <h1>Liên Hệ Với Chúng Tôi</h1>
+            <label for=""></label>
+            <input type="text" name="" id="fullname" placeholder="HỌ VÀ TÊN" required> <br>
+            <input type="email" id="email_id" placeholder="ĐỊA CHỈ EMAIL" required> <br>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="LỜI NHẮN " required></textarea> <br>
+            <button class="reset" type="reset">clear</button> <button class="send" onclick="SendMail()">Send</button>
+        </form>
+    </div>
+    
+</body>
+</html>
